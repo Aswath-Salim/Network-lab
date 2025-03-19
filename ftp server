@@ -13,7 +13,7 @@ void display_file(int sockfd) {
         if (n <= 0) {
             break;
         }
-        buffer[n] = '\0';  // Ensure null termination
+        buffer[n] = '\0';
         printf("%s", buffer);
         fflush(stdout);  // Flush output buffer to ensure immediate display
     }
@@ -59,7 +59,7 @@ int main() {
         perror("[-]Error in accepting connection");
         exit(1);
     }
-    
+   
     printf("[+]Connection accepted. Displaying received file contents:\n\n");
     display_file(new_sock);
 
